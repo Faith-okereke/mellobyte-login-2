@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    to right,
+    #8900cc,
+    #8500cd,
+    #9700cc,
+    #a500c8,
+    #b901c5
+  );
+  margin: 6rem;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7rem;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+}
+.main-image {
+  position: relative;
+}
+.main-image div {
+  position: absolute;
+  top: -40px;
+  right: -25px;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+.main-image img {
+  z-index: 99;
+  position: sticky;
+}
+h2 {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #383838;
+}
+form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+form .label {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+form .label img {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  width: 25px;
+}
+form input {
+  padding: 20px 50px;
+  border-radius: 30px;
+  background-color: #e5e5e5;
+  border: 0;
+  min-width: 450px;
+}
+::placeholder {
+  font-size: 16px;
+}
+button {
+  background-color: #20cc44;
+  padding: 18px;
+  border-radius: 30px;
+  width: 100%;
+  border: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+span {
+  color: #20cc44;
+  font-weight: 700;
+}
+span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.create {
+  padding-top: 10px;
+  color: #20cc44;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background: none;
+    margin: 20px auto;
+  }
+  main {
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+    width: 100%;
+    box-shadow: inset;
+    padding: 10px;
+    padding-top: 40px;
+  }
+  form input {
+    min-width: 260px;
+    padding: 15px;
+  }
+  button{
+    padding: 15px;
+    font-size: 15px;
+  }
+  .main-image img {
+    width: 50%;
+  }
+  .main-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-image div {
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+  }
+  ::placeholder {
+    font-size: 13px;
+    padding-left: 40px;
+  }
+}
